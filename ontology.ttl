@@ -1,0 +1,271 @@
+@prefix : <http://www.semanticweb.org/lauga/ontologies/2024/10/untitled-ontology-7/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/lauga/ontologies/2024/10/untitled-ontology-7/> .
+
+<http://accidentestrafico.org/traffic/ontology/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://accidentestrafico.org/traffic/ontology/involucravehiculo
+:involucravehiculo rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Accidente ;
+                   rdfs:range :Vehiculo .
+
+
+###  http://accidentestrafico.org/traffic/ontology/participapersona
+:participapersona rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Accidente ;
+                  rdfs:range :Persona .
+
+
+###  http://accidentestrafico.org/traffic/ontology/tieneestadometeorologico
+:tieneestadometeorologico rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Accidente ;
+                          rdfs:range :Estadometeorologico .
+
+
+###  http://accidentestrafico.org/traffic/ontology/tienelesividad
+:tienelesividad rdf:type owl:ObjectProperty ;
+                rdfs:domain :Persona ;
+                rdfs:range :Lesividad .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://accidentestrafico.org/traffic/ontology/alcohol
+:alcohol rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Accidente ;
+         rdfs:range xsd:string .
+
+
+###  http://accidentestrafico.org/traffic/ontology/droga
+:droga rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Accidente ;
+       rdfs:range xsd:string .
+
+
+###  http://accidentestrafico.org/traffic/ontology/fecha
+:fecha rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Accidente ;
+       rdfs:range xsd:dateTime .
+
+
+###  http://accidentestrafico.org/traffic/ontology/lesividad
+:lesividad rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Persona ;
+           rdfs:range xsd:string .
+
+
+###  http://accidentestrafico.org/traffic/ontology/lugar
+:lugar rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Accidente ;
+       rdfs:range xsd:string .
+
+
+###  http://accidentestrafico.org/traffic/ontology/rango_edad
+:rango_edad rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Persona ;
+            rdfs:range xsd:string .
+
+
+###  http://accidentestrafico.org/traffic/ontology/sexo
+:sexo rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Persona ;
+      rdfs:range xsd:string .
+
+
+###  http://accidentestrafico.org/traffic/ontology/tipoAccidente
+:tipoAccidente rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Accidente ;
+               rdfs:range xsd:string .
+
+
+###  http://accidentestrafico.org/traffic/ontology/tipoVehiculo
+:tipoVehiculo rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Vehiculo ;
+              rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://accidentestrafico.org/traffic/ontology/Accidente
+:Accidente rdf:type owl:Class .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Estadometeorologico
+:Estadometeorologico rdf:type owl:Class .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Lesividad
+:Lesividad rdf:type owl:Class .
+
+
+###  http://accidentestrafico.org/traffic/ontology/LesividadFatal
+:LesividadFatal rdf:type owl:Class ;
+                rdfs:subClassOf :Lesividad .
+
+
+###  http://accidentestrafico.org/traffic/ontology/LesividadGrave
+:LesividadGrave rdf:type owl:Class ;
+                rdfs:subClassOf :Lesividad .
+
+
+###  http://accidentestrafico.org/traffic/ontology/LesividadLeve
+:LesividadLeve rdf:type owl:Class ;
+               rdfs:subClassOf :Lesividad .
+
+
+###  http://accidentestrafico.org/traffic/ontology/SinAsistencia
+:SinAsistencia rdf:type owl:Class ;
+               rdfs:subClassOf :Lesividad .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Persona
+:Persona rdf:type owl:Class .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Vehiculo
+:Vehiculo rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://accidentestrafico.org/traffic/ontology/Atropello
+:Atropello rdf:type owl:NamedIndividual ,
+                    :Accidente .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Choque
+:Choque rdf:type owl:NamedIndividual ,
+                 :Accidente .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Colisión_frontal
+:Colisión_frontal rdf:type owl:NamedIndividual ,
+                           :Accidente .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Conductor
+:Conductor rdf:type owl:NamedIndividual ,
+                    :Persona .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Despejado
+:Despejado rdf:type owl:NamedIndividual ,
+                    :Estadometeorologico .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Despeñamiento
+:Despeñamiento rdf:type owl:NamedIndividual ,
+                        :Accidente .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Fallecido_24h
+:Fallecido_24h rdf:type owl:NamedIndividual ,
+                        :LesividadFatal .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Granizado
+:Granizado rdf:type owl:NamedIndividual ,
+                    :Estadometeorologico .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Ingreso
+:Ingreso rdf:type owl:NamedIndividual ,
+                  :LesividadGrave .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Lluvia
+:Lluvia rdf:type owl:NamedIndividual ,
+                 :Estadometeorologico ;
+        :participapersona :Conductor .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Nublado
+:Nublado rdf:type owl:NamedIndividual ,
+                  :Estadometeorologico .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Persona
+:Persona rdf:type owl:NamedIndividual ,
+                  :Persona ;
+         :rango_edad "25-30" ;
+         :sexo "Hombre" .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Se_desconoce
+:Se_desconoce rdf:type owl:NamedIndividual ,
+                       :Estadometeorologico ,
+                       :Lesividad .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Sin_asistencia
+:Sin_asistencia rdf:type owl:NamedIndividual ,
+                         :  SinAsistencia .
+
+
+###  http://accidentestrafico.org/traffic/ontology/alcance
+:alcance rdf:type owl:NamedIndividual ,
+                  :Accidente .
+
+
+###  http://accidentestrafico.org/traffic/ontology/asistencia_sanitaria_ambulatoria
+:asistencia_sanitaria_ambulatoria rdf:type owl:NamedIndividual ,
+                                           :LesividadLeve .
+
+
+###  http://accidentestrafico.org/traffic/ontology/pasajero
+:pasajero rdf:type owl:NamedIndividual ,
+                   :Persona .
+
+
+###  http://accidentestrafico.org/traffic/ontology/peatón
+:peatón rdf:type owl:NamedIndividual ,
+                 :Persona .
+
+
+###  http://accidentestrafico.org/traffic/ontology/salida_de_vía
+:salida_de_vía rdf:type owl:NamedIndividual ,
+                        :Accidente .
+
+
+###  http://accidentestrafico.org/traffic/ontology/vehiculo
+:vehiculo rdf:type owl:NamedIndividual ,
+                   :Vehiculo ;
+          :tipoVehiculo "Ciclo" .
+
+
+###  http://accidentestrafico.org/traffic/ontology/vuelco
+:vuelco rdf:type owl:NamedIndividual ,
+                 :Accidente .
+
+
+###  http://accidentestrafico.org/traffic/ontology/2024S111201
+<http://accidentestrafico.org/traffic/ontology/2024S111201> rdf:type owl:NamedIndividual ,
+                                                                     :Accidente ;
+                                                            :tieneestadometeorologico :Lluvia ;
+                                                            :fecha "2024-11-12T15:00:00" ;
+                                                            :lugar "Madrid" ;
+                                                            :tipoAccidente "colisión lateral" .
+
+
+###  http://accidentestrafico.org/traffic/ontology/Accidente/2023S040280
+<http://accidentestrafico.org/traffic/ontology/Accidente/2023S040280> rdf:type owl:NamedIndividual ,
+                                                                               :Accidente ;
+                                                                      :fecha "2024-11-10T14:30:00" ;
+                                                                      :lugar "Latina" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
