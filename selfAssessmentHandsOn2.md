@@ -35,4 +35,8 @@
         La clase Accidente se usa para enlazar con otras entidades, como vehículos y personas.
 
 ## Comments on the self-assessment
-  - **Challenges**  A veces, encontrar nombres coherentes y que sigan las buenas prácticas en ontologías fue complicado.
+- **Challenges**  A veces, encontrar nombres coherentes y que sigan las buenas prácticas en ontologías fue complicado.
+
+## Conclusion
+A lo largo del trabajo, se lograron cumplir los requisitos presentados con respecto a la estructura de la ontología, la definición de las clases y propiedades y la aplicación de una estrategia de nombres adecuada.
+Las decisiones tomadas respecto a la elección de clases y propiedades fueron necesaias para reflejar las necesidades del dominio de nuestro proyecto, que se basa en los accidentes de tráfico.
