@@ -110,6 +110,26 @@
 :Lesividad rdf:type owl:Class .
 
 
+###  http://accidentestrafico.org/traffic/ontology/LesividadFatal
+:LesividadFatal rdf:type owl:Class ;
+                rdfs:subClassOf :Lesividad .
+
+
+###  http://accidentestrafico.org/traffic/ontology/LesividadGrave
+:LesividadGrave rdf:type owl:Class ;
+                rdfs:subClassOf :Lesividad .
+
+
+###  http://accidentestrafico.org/traffic/ontology/LesividadLeve
+:LesividadLeve rdf:type owl:Class ;
+               rdfs:subClassOf :Lesividad .
+
+
+###  http://accidentestrafico.org/traffic/ontology/SinAsistencia
+:SinAsistencia rdf:type owl:Class ;
+               rdfs:subClassOf :Lesividad .
+
+
 ###  http://accidentestrafico.org/traffic/ontology/Persona
 :Persona rdf:type owl:Class .
 
@@ -154,7 +174,7 @@
 
 ###  http://accidentestrafico.org/traffic/ontology/Fallecido_24h
 :Fallecido_24h rdf:type owl:NamedIndividual ,
-                        :Lesividad .
+                        :LesividadFatal .
 
 
 ###  http://accidentestrafico.org/traffic/ontology/Granizado
@@ -164,7 +184,7 @@
 
 ###  http://accidentestrafico.org/traffic/ontology/Ingreso
 :Ingreso rdf:type owl:NamedIndividual ,
-                  :Lesividad .
+                  :LesividadGrave .
 
 
 ###  http://accidentestrafico.org/traffic/ontology/Lluvia
@@ -193,7 +213,7 @@
 
 ###  http://accidentestrafico.org/traffic/ontology/Sin_asistencia
 :Sin_asistencia rdf:type owl:NamedIndividual ,
-                         :Lesividad .
+                         :  SinAsistencia .
 
 
 ###  http://accidentestrafico.org/traffic/ontology/alcance
@@ -203,7 +223,7 @@
 
 ###  http://accidentestrafico.org/traffic/ontology/asistencia_sanitaria_ambulatoria
 :asistencia_sanitaria_ambulatoria rdf:type owl:NamedIndividual ,
-                                           :Lesividad .
+                                           :LesividadLeve .
 
 
 ###  http://accidentestrafico.org/traffic/ontology/pasajero
