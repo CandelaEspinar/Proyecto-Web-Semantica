@@ -203,7 +203,7 @@
                                                           <http://accidentestrafico.org/traffic/ontology/sexo> "Hombre" .
 
 
-<http://accidentestrafico.org/traffic/resource/Leisvidad/ingreso1> rdf:type owl:NamedIndividual , :Lesividad ;
+<http://accidentestrafico.org/traffic/resource/Lesividad/ingreso1> rdf:type owl:NamedIndividual , :Lesividad ;
                                                             <http://accidentestrafico.org/traffic/ontology/cod_lesividad> 2 ;
                                                             <http://accidentestrafico.org/traffic/ontology/tipoLesividad> "Ingreso" .
 
