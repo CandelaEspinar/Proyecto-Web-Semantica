@@ -21,7 +21,7 @@
 - [x] Follows the resource naming strategy
 - [x] Contains at least one class
 - [x] Contains at least one object property (where the value of the property is a resource)
-        sTienes varias propiedades de objeto, como involucravehiculo, participapersona
+        Tienes varias propiedades de objeto, como involucravehiculo, participapersona
 - [x] Contains at least one datatype property (where the value of the property is a string literal, usually typed)
         Hay varias propiedades de datos, como fecha, lugar, tipoAccidente,
 - [x] Defines the domain of all the properties (the origin of the property)
