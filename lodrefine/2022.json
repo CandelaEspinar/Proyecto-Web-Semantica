@@ -193,26 +193,6 @@
           ],
           "fromBlank": false,
           "fromError": false,
-          "to": "sin especificar"
-        }
-      ],
-      "description": "Mass edit cells in column tipo_vehiculo"
-    },
-    {
-      "op": "core/mass-edit",
-      "engineConfig": {
-        "facets": [],
-        "mode": "row-based"
-      },
-      "columnName": "tipo_vehiculo",
-      "expression": "value",
-      "edits": [
-        {
-          "from": [
-            "sin especificar"
-          ],
-          "fromBlank": false,
-          "fromError": false,
           "to": "Sin especificar"
         }
       ],
