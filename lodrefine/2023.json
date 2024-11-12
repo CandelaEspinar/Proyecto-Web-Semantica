@@ -236,66 +236,6 @@
           ],
           "fromBlank": false,
           "fromError": false,
-          "to": "Nocconocido"
-        }
-      ],
-      "description": "Mass edit cells in column cod_lesividad"
-    },
-    {
-      "op": "core/mass-edit",
-      "engineConfig": {
-        "facets": [],
-        "mode": "row-based"
-      },
-      "columnName": "cod_lesividad",
-      "expression": "value",
-      "edits": [
-        {
-          "from": [
-            "Nocconocido"
-          ],
-          "fromBlank": false,
-          "fromError": false,
-          "to": "No conocido"
-        }
-      ],
-      "description": "Mass edit cells in column cod_lesividad"
-    },
-    {
-      "op": "core/mass-edit",
-      "engineConfig": {
-        "facets": [],
-        "mode": "row-based"
-      },
-      "columnName": "cod_lesividad",
-      "expression": "value",
-      "edits": [
-        {
-          "from": [
-            "No conocido"
-          ],
-          "fromBlank": false,
-          "fromError": false,
-          "to": "se desconoce"
-        }
-      ],
-      "description": "Mass edit cells in column cod_lesividad"
-    },
-    {
-      "op": "core/mass-edit",
-      "engineConfig": {
-        "facets": [],
-        "mode": "row-based"
-      },
-      "columnName": "cod_lesividad",
-      "expression": "value",
-      "edits": [
-        {
-          "from": [
-            "se desconoce"
-          ],
-          "fromBlank": false,
-          "fromError": false,
           "to": "Se desconoce"
         }
       ],
