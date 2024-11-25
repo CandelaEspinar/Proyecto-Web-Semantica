@@ -55,6 +55,20 @@
     rr:objectMap [
       rr:parentTriplesMap <#TriplesMap2>
     ]
+  ];
+
+    rr:predicateObjectMap [
+    rr:predicate :involucraVehiculo;
+    rr:objectMap [
+      rr:parentTriplesMap <#TriplesMap6>
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate :estadoMeteorologico;
+    rr:objectMap [
+      rml:reference "estadoMeteorologico"
+    ]
   ].
 
 
@@ -151,6 +165,23 @@
       rml:reference "coordenadaY";
       rr:datatype xsd:integer
     ]
+  ].
+
+# Vehículos
+<#TriplesMap6> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "2022_Accidentalidad_updated.csv";
+    rml:referenceFormulation ql:CSV 
+  ];
+
+  rr:subjectMap [
+    rr:template "http://accidentestrafico.org/traffic/resource/Vehiculo/{idVehiculo}";
+    rr:class :Vehiculo
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate :tipoVehiculo;
+    rr:objectMap [ rml:reference "tipoVehiculo" ]
   ].
 
 

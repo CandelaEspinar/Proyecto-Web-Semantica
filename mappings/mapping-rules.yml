@@ -10,8 +10,8 @@ prefixes:
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   : http://accidentestrafico.org/traffic/ontology/
 
+
 mappings:
-  # Mapping para accidentes
   triplesmap_accidentes:
     sources:
       - [2022_Accidentalidad_updated.csv~csv]
@@ -21,10 +21,13 @@ mappings:
       - [:NumeroExpediente, $(NumeroExpediente)]
       - [:fechaHora, $(fechaHora), xsd:dateTime]
       - [:tipoAccidente, $(tipoAccidente)]
+      - [:distrito, $(distrito)]
       - [:ocurreendireccion, http://accidentestrafico.org/traffic/resource/Direccion/$(idDireccion)]
       - [:participapersona, http://accidentestrafico.org/traffic/resource/Persona/$(idPersona)]
+      - [:estadoMeteorologico, $(estadoMeteorologico)]
+      - [:involucraVehiculo, http://accidentestrafico.org/traffic/resource/Vehiculo/$(idVehiculo)]
 
-  # Mapping para personas relacionadas al accidente
+
   triplesmap_personas:
     sources:
       - [2022_Accidentalidad_updated.csv~csv]
@@ -37,7 +40,7 @@ mappings:
       - [:PruebaDrogas, $(droga)]
       - [:tienelesividad, http://accidentestrafico.org/traffic/resource/Lesividad/$(CodLesividad)]
 
-  # Mapping para direcciones
+
   triplesmap_direcciones:
     sources:
       - [2022_Accidentalidad_updated.csv~csv]
@@ -48,7 +51,7 @@ mappings:
       - [:distrito, $(distrito)]
       - [:tienecoordenadas, http://accidentestrafico.org/traffic/resource/Coordenadas/$(idCoordenadas)]
 
-  # Mapping para coordenadas
+
   triplesmap_coordenadas:
     sources:
       - [2022_Accidentalidad_updated.csv~csv]
@@ -58,7 +61,7 @@ mappings:
       - [:coordenadax, $(coordenadaX), xsd:integer]
       - [:coordenaday, $(coordenadaY), xsd:integer]
 
-  # Mapping para lesividades
+
   triplesmap_lesividades:
     sources:
       - [2022_Accidentalidad_updated.csv~csv]
@@ -66,4 +69,13 @@ mappings:
     po:
       - [a, :Lesividad]
       - [:tipoLesividad, $(tipoLesividad)]
+
+
+  triplesmap_vehiculos:
+    sources:
+      - [2022_Accidentalidad_updated.csv~csv]
+    s: http://accidentestrafico.org/traffic/resource/Vehiculo/$(idVehiculo)
+    po:
+      - [a, :Vehiculo]
+      - [:tipoVehiculo, $(tipoVehiculo)]
 
