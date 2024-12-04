@@ -109,7 +109,7 @@ rdfs:label "tiene lesividad" ;
 rdfs:domain ns:Accidente ;
 rdfs:range ns:Lesividad .
 
-ns: OcurreEn a owl:ObjectProperty ;
+ns:OcurreEn a owl:ObjectProperty ;
 rdfs:label "  ocurre en" ;
 rdfs:domain ns:Accidente ;
 rdfs:range ns:Direccion .
