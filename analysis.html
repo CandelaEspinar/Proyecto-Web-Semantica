@@ -385,6 +385,7 @@
     <!-- Estrategia de Nombres para Recursos -->
     <section>
         <h2>3. Estrategia de Nombres para Recursos</h2>
+        <p>La estrategia de nombrado de recursos que se seguirá en la ontología a crear será la siguiente:</p>
 
         <p>
             <strong>Dominio base de la URI:</strong> <code>http://accidentestrafico.org/</code>.
@@ -394,20 +395,28 @@
             <strong>Path de contexto:</strong> <code>traffic/</code>
         </p>
 
+        <p>Es importante diferencia el modelo de la ontología con sus respectivas instancias, para esto usaremos los siguientes nombrados para identificar, por una parte las clases y propiedades de la ontología, y por otro las instancias (datos o individuos).</p>
+
         <p>
             <strong>Definición de la ontología:</strong> <code>ontology/</code> se usará para definir las clases y propiedades de la ontología.
         </p>
-
-        <p><strong>Ejemplo de URI para una clase:</strong> <code>http://accidentestrafico.org/traffic/ontology/Accidente#</code></p>
-
-        <p><strong>Ejemplo de URI para una propiedad:</strong> <code>http://accidentestrafico.org/traffic/ontology/tipoAccidente#</code></p>
+        <p>
+            <strong>Patrón Clases:</strong> <code>http://accidentestrafico.org/traffic/ontology/nombreOntología#nombreClase</code>. Se reemplazará el nombreOntología y nombreClase por sus verdaderos valores.
+        </p>
+        <p>Ejemplo de URI para una clase:<code>http://accidentestrafico.org/traffic/ontology/TrafficOntology#Accidente</code></p>
+        <p>
+            <strong>Patrón Propiedades:</strong> <code>http://accidentestrafico.org/traffic/ontology/nombreOntología#nombrePropiedad</code>. Se reemplazará el nombreOntología y nombrePropiedad por sus verdaderos valores.
+        </p>        
+        <p>Ejemplo de URI para una propiedad:<code>http://accidentestrafico.org/traffic/ontology/TrafficOntology#tipoAccidente</code></p>
 
         <p>
             <strong>Path para datos o individuos:</strong> <code>resource/</code> (donde se almacenan los recursos individuales de cada accidente).
         </p>
-
         <p>
-            <strong>Ejemplo de URI para un accidente concreto:</strong>
+            <strong>Patrón Instancia:</strong> <code>http://accidentestrafico.org/traffic/ontology/nombreClase/identificador</code>. Se reemplazará el nombreOntología e identificador por sus verdaderos valores.
+        </p>
+        <p>
+            Ejemplo de URI para un accidente concreto:
             <code>http://accidentestrafico.org/traffic/resource/Accidente/2023S040280</code>.
             Aquí, la última parte ( <code>2023S040280</code> ) es el identificador único del accidente.
         </p>
