@@ -1,49 +1,71 @@
+@prefix : <http://accidentestrafico.org/traffic/> .
+@prefix ns: <http://accidentestrafico.org/traffic/ontology/TrafficOntology#> .
+@prefix ind: <http://accidentestrafico.org/traffic/resource/>
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    rdfs:label "Ontología de Accidentes de Tráfico"@es ;
+    dc:title "TrafficOntology"@en ;
+    dc:creator "Grupo 06";
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
 #################################################################
 #    Intancias
 #################################################################
 
 # Instancia de Accidente
-ind:Accidente2024S111201 a :Accidente ;
-    :NumeroExpediente "2024S111201" ;
-    :Fecha "2024-11-12"^^xsd:date ;
-    :Hora "15:00:00"^^xsd:time ;
-    :TipoAccidente "Colisión lateral" ;
-    :PruebaAlcohol "NO" ;
-    :PruebaDrogas "YES" ;
-    :OcurreEn ind:Direccion1 ;
-    :TieneEstadoMeteorologico ind:EstadoLluvia ;
-    :ParticipaPersona ind:Persona123 ;
-    :InvolucraVehiculo ind:Vehiculo123 .
+ind:Accidente/Accidente2024S111201 a :Accidente ;
+    ns:numExpediente "2024S111201" ;
+    ns:fecha "2024-11-12"^^xsd:date ; 
+    ns:hora "15:00:00"^^xsd:time ;
+    ns:tipoAccidente "Colisión lateral" ;
+    ns:OcurreEn ind:Direccion1 ;
+    ns:TieneEstadoMeteorologico ind:EstadoMeteorologico/EstadoLluvia ;
+    ns:ParticipaPersona ind:Persona/Persona123 ;
+    ns:InvolucraVehiculo ind:Vehiculo/Vehiculo123 .
+
 
 # Instancia de Persona
-ind:Persona123 a :Persona ;
-    :RangoEdad "De 25 a 29 años" ;
-    :Sexo "Hombre" ;
-    :TipoDePersona "Conductor" ;
-    :PruebaAlcohol "NO" ;
-    :PruebaDrogas "YES" ;
-    :TieneLesividad ind:LesividadIngreso .
+ind:Persona/Persona123 a :Persona ;
+    ns:rangoEdad "De 25 a 29 años" ;
+    ns:sexo "Hombre" ;
+    ns:tipoDePersona "Conductor" ;
+    ns:positivaAlcohol "NO" ;
+    ns:positivaDroga "YES" ;
+    ns:TieneLesividad ind:Lesividad/Lesividad123 .
+   
 
 # Instancia de Lesividad
-ind:LesividadIngreso a :Lesividad ;
-    :CodLesividad 2 .
+ind:Lesividad/Lesividad123 a :Lesividad ;
+    ns:lesividad "Ingreso inferior o igual a 24 horas";
+    ns:codLesividad 2 .
+
 
 # Instancia de Dirección
-ind:Direccion1 a :Direccion ;
-    :Localizacion "CALL. TESORO / CALL. MINAS, 12" ;
-    :Distrito "CENTRO" ;
-    :TieneCoordenadas ind:CoordenadasDireccion1 .
+ind:Direccion/Direccion1 a :Direccion ;
+    ns:localizacion "CALL. TESORO / CALL. MINAS, 12" ;
+    ns:numero 12 ;
+    ns:distrito "CENTRO" ;
+    ns:distritoNum 1 ;
+    ns:TieneCoordenadas ind:Coordenadas/CoordenadasDireccion1 .
+
 
 # Instancia de Coordenadas
-ind:CoordenadasDireccion1 a :Coordenadas ;
-    :Coordenadas 123456 ;
-    :CoordenadaY 654321 .
+ind:Coordenadas/CoordenadasDireccion1 a :Coordenadas ;
+    ns:coordenadaX 123456 ;
+    ns:coordenadaY 654321 .
+
 
 # Instancia de Estado Meteorológico
-ind:EstadoLluvia a :EstadoMeteorologico ;
-    :Estado "Lluvia" .
+ind:EstadoMeteorologico/EstadoLluvia a :EstadoMeteorologico ;
+    ns:estadoMeteorologico "Lluvia" .
+
 
 # Instancia de Vehículo
-ind:Vehiculo123 a :Vehiculo ;
-    :TipoVehiculo "Coche" .
+ind:Vehiculo/Vehiculo123 a :Vehiculo ;
+    ns:tipoVehiculo "Coche" .
+
 
