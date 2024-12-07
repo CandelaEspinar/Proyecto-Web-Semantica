@@ -1,8 +1,0 @@
-RESUMEN DE TAREAS:
- [] Cambiar estructura de los URIs.
- [] Declarar prefijos y puntos de cierre en todas las tripletas.
- [] Separar información de personas y accidentes.
- [] Codificar fechas usando xsd:date.
- [] Especificar rdfs:range en propiedades de datos.
- [] Corregir tipado de direcciones y ubicaciones.
- [] Validar el archivo con herramientas online.
