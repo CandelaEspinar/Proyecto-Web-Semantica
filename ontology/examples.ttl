@@ -46,7 +46,7 @@
 <http://accidentestrafico.org/traffic/resource/Direccion/Direccion1> a :Direccion ;
     ns:localizacion "CALL. TESORO / CALL. MINAS, 12" ;
     ns:distrito "CENTRO (1)" ;
-    ns:tieneCoordenadas "(123456, 654321)" .
+    ns:coordenadas "(123456, 654321)" .
 
 # Instancia de Estado Meteorológico
 <http://accidentestrafico.org/traffic/resource/EstadoMeteorologico/EstadoMeteorologico_Lluvia> a :EstadoMeteorologico ;
