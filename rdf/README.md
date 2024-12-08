@@ -1,1 +1,1 @@
-Archivos subidos en un .rar ya que GitHub no dejaba subir archivos grandes.
+Archivos subidos en un .zip ya que GitHub no dejaba subir archivos grandes.
