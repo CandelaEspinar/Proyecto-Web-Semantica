@@ -1,6 +1,7 @@
 PREFIX ns: <http://accidentestrafico.org/traffic/ontology/TrafficOntology#>
 PREFIX : <http://accidentestrafico.org/traffic/resource/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
 
 # Consulta 1: Obtener todos los accidentes con su fecha y tipo de accidente
 SELECT ?accidente ?fecha ?tipoAccidente
@@ -54,4 +55,13 @@ WHERE {
   ?accidente ns:ParticipaPersona ?persona ;
              ns:fecha ?fecha .
   ?persona ns:positivaAlcohol "NO" .
+}
+
+# Consulta: Obtener accidentes y su distrito con el enlace a Wikidata
+SELECT ?accidente ?distrito ?distrito_Wikidata
+WHERE {
+  ?accidente ns:OcurreEn ?direccion .
+  ?direccion ns:distrito ?distrito .
+  ?direccion ns:distrito_Wikidata ?distrito_Wikidata .
+  FILTER(STRSTARTS(STR(?distrito_Wikidata), "http://www.wikidata.org/entity/Q"))
 }
