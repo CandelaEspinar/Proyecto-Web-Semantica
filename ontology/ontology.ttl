@@ -135,7 +135,7 @@ ns:Direccion a owl:Class ;
 rdfs:label "Direccion" .
 
 ns:EstadoMeteorológico a owl:Class ;
-rdfs:label "Estado Meteorológico" .
+rdfs:label "Estado Meteorologico" .
 
 ns:Lesividad a owl:Class ;
 rdfs:label "Lesividad" .
