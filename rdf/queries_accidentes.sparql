@@ -1,0 +1,57 @@
+PREFIX ns: <http://accidentestrafico.org/traffic/ontology/TrafficOntology#>
+PREFIX : <http://accidentestrafico.org/traffic/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Consulta 1: Obtener todos los accidentes con su fecha y tipo de accidente
+SELECT ?accidente ?fecha ?tipoAccidente
+WHERE {
+  ?accidente a ns:Accidente ;
+             ns:fecha ?fecha ;
+             ns:tipoAccidente ?tipoAccidente .
+}
+
+# Consulta 2: Obtener la ubicación de cada accidente con coordenadas
+SELECT ?accidente ?coordenadas
+WHERE {
+  ?accidente ns:OcurreEn ?direccion .
+  ?direccion ns:coordenadas ?coordenadas .
+}
+
+# Consulta 3: Filtrar accidentes donde el estado meteorológico sea "Despejado"
+SELECT ?accidente ?fecha
+WHERE {
+  ?accidente ns:TieneEstadoMeteorologico ?estadoMeteorologico ;
+             ns:fecha ?fecha .
+  ?estadoMeteorologico ns:estadoMeteorologico "Despejado" .
+}
+
+# Consulta 4: Obtener los accidentes con pasajeros como tipo de persona
+SELECT ?accidente ?tipoPersona
+WHERE {
+  ?accidente ns:ParticipaPersona ?persona .
+  ?persona ns:tipoDePersona "Pasajero" .
+}
+
+# Consulta 5: Contar el número total de accidentes
+SELECT (COUNT(?accidente) AS ?totalAccidentes)
+WHERE {
+  ?accidente a ns:Accidente ;
+             ns:fecha ?fecha .
+}
+
+# Consulta 6: Listar accidentes con distrito y tipo de vehículo involucrado
+SELECT ?accidente ?distrito ?tipoVehiculo
+WHERE {
+  ?accidente ns:OcurreEn ?direccion ;
+             ns:InvolucraVehiculo ?vehiculo .
+  ?direccion ns:distrito ?distrito .
+  ?vehiculo ns:tipoVehiculo ?tipoVehiculo .
+}
+
+# Consulta 7: Listar los accidentes donde no hubo prueba positiva de alcohol
+SELECT ?accidente ?fecha
+WHERE {
+  ?accidente ns:ParticipaPersona ?persona ;
+             ns:fecha ?fecha .
+  ?persona ns:positivaAlcohol "NO" .
+}
