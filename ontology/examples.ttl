@@ -41,22 +41,14 @@ ind:Persona/Persona123 a :Persona ;
 # Instancia de Lesividad
 ind:Lesividad/Lesividad123 a :Lesividad ;
     ns:lesividad "Ingreso inferior o igual a 24 horas";
-    ns:codLesividad 2 .
+    ns:codLesividad "2" .
 
 
 # Instancia de Dirección
 ind:Direccion/Direccion1 a :Direccion ;
     ns:localizacion "CALL. TESORO / CALL. MINAS, 12" ;
-    ns:numero 12 ;
-    ns:distrito "CENTRO" ;
-    ns:distritoNum 1 ;
-    ns:TieneCoordenadas ind:Coordenadas/CoordenadasDireccion1 .
-
-
-# Instancia de Coordenadas
-ind:Coordenadas/CoordenadasDireccion1 a :Coordenadas ;
-    ns:coordenadaX 123456 ;
-    ns:coordenadaY 654321 .
+    ns:distrito "CENTRO (1)" ;
+    ns:tieneCoordenadas "(123456, 654321)" .
 
 
 # Instancia de Estado Meteorológico
