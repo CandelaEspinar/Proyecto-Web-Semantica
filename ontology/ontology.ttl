@@ -1,10 +1,11 @@
 @prefix : <http://accidentestrafico.org/traffic/> .
 @prefix ns: <http://accidentestrafico.org/traffic/ontology/TrafficOntology#> .
-@prefix ind: <http://accidentestrafico.org/traffic/resource/>
+@prefix ind: <http://accidentestrafico.org/traffic/resource/> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 : a owl:Ontology ;
     rdfs:label "Ontología de Accidentes de Tráfico"@es ;
