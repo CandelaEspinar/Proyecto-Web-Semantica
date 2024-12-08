@@ -2,10 +2,9 @@
 @prefix rml: <http://semweb.mmlab.be/ns/rml#>.
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix ns: <http://accidentestrafico.org/traffic/ontology#>.
+@prefix ns: <http://accidentestrafico.org/traffic/ontology/TrafficOntology#>.
 @prefix : <http://accidentestrafico.org/traffic/resource/>.
 @base <http://accidentestrafico.org/traffic/resource/>.
-
 
 <#Accidentes2022> a rr:TriplesMap;
   rml:logicalSource [
@@ -37,7 +36,7 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate ns:tipo_accidente;
+    rr:predicate ns:tipoAccidente ;
     rr:objectMap [
       rml:reference "tipo_accidente";
       rr:datatype xsd:string
@@ -90,7 +89,7 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate ns:estado_meteorologico;
+    rr:predicate ns:estadoMeteorologico;
     rr:objectMap [
       rml:reference "estado_meteorológico";
       rr:datatype xsd:string
@@ -112,7 +111,7 @@
 
   # Propiedades de la dirección
   rr:predicateObjectMap [
-    rr:predicate ns:localizacion_numero;
+    rr:predicate ns:localizacion;
     rr:objectMap [
       rml:reference "localizacion_numero";
       rr:datatype xsd:string
@@ -121,7 +120,7 @@
 
 
   rr:predicateObjectMap [
-    rr:predicate ns:distritoNum;
+    rr:predicate ns:distrito;
     rr:objectMap [
       rml:reference "distrito(num)";
       rr:datatype xsd:string
@@ -136,9 +135,9 @@
     ]
   ];
 
-  # Relación con el distrito_Wikidata
+  # Nueva propiedad: distrito_Wikidata
   rr:predicateObjectMap [
-    rr:predicate ns:distrito_Wikidata;
+    rr:predicate ns:distritoWikidata;
     rr:objectMap [
       rml:reference "distrito_Wikidata";
       rr:datatype xsd:anyURI
@@ -182,7 +181,7 @@
 
   # Propiedades de la persona
   rr:predicateObjectMap [
-    rr:predicate ns:tipo_persona;
+    rr:predicate ns:tipoPersona;
     rr:objectMap [
       rml:reference "tipo_persona";
       rr:datatype xsd:string
@@ -190,7 +189,7 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate ns:rango_edad;
+    rr:predicate ns:rangoEdad;
     rr:objectMap [
       rml:reference "rango_edad";
       rr:datatype xsd:string
@@ -206,7 +205,7 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate ns:positiva_alcohol;
+    rr:predicate ns:positivaAlcohol;
     rr:objectMap [
       rml:reference "positiva_alcohol";
       rr:datatype xsd:string
@@ -214,7 +213,7 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate ns:positiva_droga;
+    rr:predicate ns:positivaDroga;
     rr:objectMap [
       rml:reference "positiva_droga";
       rr:datatype xsd:string
@@ -244,7 +243,7 @@
 
   # Propiedades de la lesividad
   rr:predicateObjectMap [
-    rr:predicate ns:cod_lesividad;
+    rr:predicate ns:codLesividad;
     rr:objectMap [
       rml:reference "cod_lesividad";
       rr:datatype xsd:string
