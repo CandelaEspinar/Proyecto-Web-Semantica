@@ -3,6 +3,7 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix ns: <http://accidentestrafico.org/traffic/ontology/TrafficOntology#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://accidentestrafico.org/traffic/resource/>.
 @base <http://accidentestrafico.org/traffic/resource/>.
 
@@ -135,13 +136,12 @@
     ]
   ];
 
-  # Nueva propiedad: distrito_Wikidata
   rr:predicateObjectMap [
-    rr:predicate ns:distritoWikidata;
-    rr:objectMap [
-      rml:reference "distrito_Wikidata";
-      rr:datatype xsd:anyURI
-    ]
+      rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ];
+      rr:objectMap [
+          rr:column "distrito_Wikidata";
+          rr:termType rr:IRI
+      ]
   ].
 
 
